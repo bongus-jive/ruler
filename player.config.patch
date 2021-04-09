@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/deploymentConfig/scripts/-",
+    "value": "/pat/ruler/ruler.lua"
+  },
+	{
+		"op": "add",
+		"path": "/defaultBlueprints/tier1/-",
+		"value": { "item" : "pat_ruler" } 
+	}
+]

@@ -1,0 +1,13 @@
+{
+  "name" : "pat_ruler_legs",
+  "type" : "legs",
+
+  "scripts" : ["tech.lua"],
+
+  "description" : "h",
+  "shortDescription" : "Ruler",
+  "rarity" : "common",
+  "icon" : "/pat/ruler/ruler.png",
+	
+	"chipCost" : 0
+}
