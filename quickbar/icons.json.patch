@@ -6,17 +6,7 @@
       "label": "^shadow;^#ff80ce;Ruler",
       "icon": "/pat/ruler/ruler.png",
       "weight": -999,
-      "action": [ "pane", "/pat/ruler/pane/ruler.config" ]
-    }
-  },
-	{
-    "op": "add",
-    "path": "/items/patman:rulerConfig",
-    "value": {
-      "label": "^shadow;^#ff80ce;Ruler Config",
-      "icon": "/pat/ruler/rulerConfig.png",
-      "weight": -998,
-      "action": [ "pane", "/pat/ruler/pane/rulerConfig.config" ]
+			"action": [ "exec", "/pat/ruler/toggle.lua" ]
     }
   }
 ]

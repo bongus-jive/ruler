@@ -1,8 +1,8 @@
 {
-  "version" : "0.1",
-  "author" : "patman",
+  "version" : "1.0",
   "tags" : "Crafting and Building|In-Game Tools",
-  "description" : "literaly just a remake of the ruler from terraria\njust because some dingus asked for it\n\n\nmake the item at hand or use the button in Quickbar to toggle it\nit requires a tech slot to use because game sucks\nbut im not a bad modder and actually let you choose which slot it takes\ntoggling it will switch between whatever is in that slot and the ruler\n\nchange the slot by holding shift, crouching, and using the item or just use the button in Quickbar\n\n\nwtrf patmane make an ufnuny mod  ??? ?\n\n\n\njoin this\n[h1]https://discord.gg/GdsQSgV[/h1]\nand do this\nhttps://www.patreon.com/pathiccstar",
+  "author" : "patman",
+  "description" : "literaly just a remake of the ruler from terraria\njust because some dingus asked for it\n\nuse the button in Quickbar to toggle it\n\n\nwtrf patmane make an ufnuny mod  ??? ?\n\n\njoin this\n[h1]https://discord.gg/GdsQSgV[/h1]\nand do this\nhttps://www.patreon.com/pathiccstar",
   "name" : "pat_ruler",
   "friendlyName" : "Ruler",
   "steamContentId" : "2451043851",

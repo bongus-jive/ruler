@@ -4,40 +4,56 @@ require "/scripts/vec2.lua"
 local oldInit = init or function() end
 local oldUpdate = update or function() end
 
-local aimPosition = function()
-	return world.sendEntityMessage(player.id(), "pat_ruler_aimPosition"):result()
+local rulerEnabled, aimPosition, oldHeadTech
+
+local function equipTech(t)
+	if t then
+		player.makeTechAvailable(t)
+		player.enableTech(t)
+		player.equipTech(t)
+	end
 end
 
 function init()
 	oldInit()
 	
-	player.setProperty("pat_ruler_paneOpen", false)
+	rulerEnabled = player.getProperty("pat_ruler_enabled", false)
+	
+	for _,t in ipairs(player.availableTechs()) do
+		if t == "pat_ruler_body" or t == "pat_ruler_legs" then
+			player.makeTechUnavailable(t)
+		end
+	end
+	
+	message.setHandler("pat_ruler_toggle", function(_, isLocal)
+		if isLocal then
+			rulerEnabled = not rulerEnabled
+			player.setProperty("pat_ruler_enabled", rulerEnabled)
+			return rulerEnabled
+		end
+	end)
+	
+	oldHeadTech = player.equippedTech("head")
+	equipTech("pat_ruler_head")
 end
 
 function update(dt)
 	oldUpdate(dt)
 	
-	local techs = {
-		head = player.equippedTech("head"),
-		body = player.equippedTech("body"),
-		legs = player.equippedTech("legs")
-	}
-	
-	for _,tech in ipairs(player.availableTechs()) do
-		for slot,ruler in pairs(techs) do
-			if tech == "pat_ruler_"..slot and tech ~= ruler then
-				player.makeTechUnavailable(tech)
-			end
-		end
+	if not aimPosition and getmetatable ''.pat_ruler then
+		aimPosition = getmetatable ''.pat_ruler
+		equipTech(oldHeadTech)
+		player.makeTechUnavailable("pat_ruler_head")
 	end
 	
-	--this sucks
-	-- dont care
-	local aim = aimPosition()
-	if aim then
+	--the funny ruler part
+	-- horrible
+	if rulerEnabled and aimPosition then
+		local aim = aimPosition()
+		
 		aim = vec2.add(util.tileCenter(aim), {0, 2})
 		local ePos = util.tileCenter(entity.position())
-		local position = vec2.add(vec2.sub(ePos, entity.position()), {0, -2})
+		local position = vec2.add(world.distance(ePos, entity.position()), {0, -2})
 		
 		local d = world.distance(aim, ePos)
 		
@@ -113,7 +129,7 @@ function update(dt)
 		end
 		
 		--draw text
-		local textPos = vec2.add(vec2.sub(aim, ePos), {1.25, -0.75})
+		local textPos = vec2.add(world.distance(aim, ePos), {1.25, -0.75})
 		if d[2] < 0 then textPos[2] = textPos[2] - 2.5 end
 		
 		local str = string.format("%.0fx%.0f", display[1], display[2])
@@ -123,22 +139,5 @@ function update(dt)
 			
 			textPos[1] = textPos[1] + (h == "1" and 0.75 or 1.25) * 0.75
 		end
-		
-		world.debugText(vec2.print(display, 0), ePos, "red")
 	end
 end
-
--- h
-
--- local poly3 = {
-	-- {xOffset, yOffset},
-	-- {-xOffset, yOffset},
-	-- {-xOffset, d[2] + yOffset},
-	-- {xOffset, d[2] + yOffset}
--- }
--- local poly4 = {
-	-- {xOffset, d[2] + yOffset},
-	-- {d[1] + xOffset, d[2] + yOffset},
-	-- {d[1] + xOffset, d[2] - yOffset},
-	-- {xOffset, d[2] - yOffset}
--- }
