@@ -6,6 +6,7 @@
       "label": "^shadow;^#ff80ce;Ruler",
       "icon": "/pat/ruler/ruler.png",
       "weight": -999,
+			"blockAutoDismiss" : true,
 			"action": [ "exec", "/pat/ruler/toggle.lua" ]
     }
   }
