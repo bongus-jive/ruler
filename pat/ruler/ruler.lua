@@ -4,7 +4,7 @@ require "/scripts/vec2.lua"
 local oldInit = init or function() end
 local oldUpdate = update or function() end
 
-local rulerEnabled, aimPosition, oldHeadTech
+local rulerEnabled, aimPosition
 
 local function equipTech(t)
 	if t then
@@ -33,7 +33,11 @@ function init()
 		end
 	end)
 	
-	oldHeadTech = player.equippedTech("head")
+	
+	local head = player.equippedTech("head")
+	if head ~= "pat_ruler_head" then
+		player.setProperty("pat_rulerLastTech", head)
+	end
 	equipTech("pat_ruler_head")
 end
 
@@ -42,7 +46,7 @@ function update(dt)
 	
 	if not aimPosition and getmetatable ''.pat_ruler then
 		aimPosition = getmetatable ''.pat_ruler
-		equipTech(oldHeadTech)
+		equipTech(player.getProperty("pat_rulerLastTech"))
 		player.makeTechUnavailable("pat_ruler_head")
 	end
 	
