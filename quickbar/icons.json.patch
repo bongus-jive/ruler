@@ -5,9 +5,20 @@
     "value": {
       "label": "^shadow;^#ff80ce;Ruler",
       "icon": "/pat/ruler/ruler.png",
-      "weight": -999,
+      "weight": -999.02,
 			"blockAutoDismiss" : true,
 			"action": [ "exec", "/pat/ruler/toggle.lua" ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/items/patman:tilegrid",
+    "value": {
+      "label": "^shadow;^#ff80ce;Tile Grid",
+      "icon": "/pat/ruler/gridicon.png",
+      "weight": -999.01,
+			"blockAutoDismiss" : true,
+			"action": [ "exec", "/pat/ruler/toggle.lua", "grid" ]
     }
   }
 ]
