@@ -1,3 +1,5 @@
 function init()
-	getmetatable ''.pat_ruler = tech.aimPosition
+  local m = getmetatable''
+  m.pat_ruler.aimPosition = tech.aimPosition
+  m.pat_ruler.done()
 end

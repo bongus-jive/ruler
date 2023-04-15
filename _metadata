@@ -1,8 +1,8 @@
 {
-  "version" : "1.1",
-  "tags" : "Crafting and Building|In-Game Tools",
+  "version" : "1.2",
+  "tags" : "Crafting and Building|User Interface|In-Game Tools",
   "author" : "patman",
-  "description" : "literaly just a remake of the ruler from terraria\njust because some dingus asked for it\n\nit also adds that tile grid thing around the cursor\n\nuse the button in Quickbar to toggle them\n\n\nwtrf patmane make an ufnuny mod  ??? ?\n\n\njoin this\n[h1]https://discord.gg/GdsQSgV[/h1]\nand do this\nhttps://www.patreon.com/pathiccstar",
+  "description" : "literaly just a remake of the ruler from terraria\njust because some dingus asked for it\n\nit also adds that tile grid thing around the cursor\n\nuse the buttons in Quickbar to toggle them\n\nif you have [u][url=https://github.com/StarExtensions/StarExtensions/releases]StarExtensions[/url][/u] theres keybinds for both togglse in the [b]/binds[/b] menu\n\n\nwtrf patmane make an ufnuny mod  ??? ?\n\n\njoin this\n[h1]https://discord.gg/GdsQSgV[/h1]\nand do this\nhttps://www.patreon.com/pathiccstar",
   "name" : "pat_ruler",
   "friendlyName" : "Ruler",
   "steamContentId" : "2451043851",
