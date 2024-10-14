@@ -3,8 +3,8 @@
     "name": "^#ff80ce;Ruler",
     "bannerName": "Ruler",
     "binds": {
-      "toggleRuler": {"default": [], "name": "Toggle Ruler"},
-      "toggleGrid": {"default": [], "name": "Toggle Tile Grid"}
+      "toggleRuler": { "default": [ ], "name": "Toggle Ruler" },
+      "toggleGrid": { "default": [ ], "name": "Toggle Tile Grid" }
     }
   }
 }

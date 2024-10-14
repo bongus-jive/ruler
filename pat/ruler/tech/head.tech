@@ -1,13 +1,13 @@
 {
-  "name" : "pat_ruler_head",
-  "type" : "head",
+  "name": "pat_ruler_head",
+  "type": "head",
 
-  "scripts" : ["tech.lua"],
+  "scripts": [ "tech.lua" ],
 
-  "description" : "h",
-  "shortDescription" : "Ruler",
-  "rarity" : "common",
-  "icon" : "/pat/ruler/ruler.png",
-	
-	"chipCost" : 0
+  "description": "h",
+  "shortDescription": "Ruler",
+  "rarity": "common",
+  "icon": "/pat/ruler/ruler.png",
+
+  "chipCost": 0
 }
