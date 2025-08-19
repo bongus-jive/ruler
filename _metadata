@@ -1,11 +1,12 @@
 {
-  "version" : "1.2",
-  "tags" : "Crafting and Building|User Interface|In-Game Tools",
   "author" : "patman",
-  "description" : "literaly just a remake of the ruler from terraria\njust because some dingus asked for it\n\nit also adds that tile grid thing around the cursor\n\nuse the buttons in Quickbar to toggle them\n\nif you have [u][url=https://github.com/StarExtensions/StarExtensions/releases]StarExtensions[/url][/u] theres keybinds for both togglse in the [b]/binds[/b] menu\n\n\nwtrf patmane make an ufnuny mod  ??? ?\n\n\njoin this\n[h1]https://discord.gg/GdsQSgV[/h1]\nand do this\nhttps://www.patreon.com/pathiccstar",
-  "name" : "pat_ruler",
+  "description" : "adds the ruler from terraria\nand also the tile grid around the cursor\n\nuse the buttons in Quickbar to toggle them\ntheres also keybinds for StarExtensions/OpenStarbound",
   "friendlyName" : "Ruler",
-  "steamContentId" : "2451043851",
+  "includes" : ["QuickbarMini", "StardustLib"],
   "link" : "steam://url/CommunityFilePage/2451043851",
-  "includes" : ["QuickbarMini", "StardustLib"]
+  "name" : "pat_ruler",
+  "steamContentId" : "2451043851",
+  "steamDescription" : "adds a remake of the ruler from terraria\nalso adds that tile grid thing around the cursor\n\nuse the buttons in Quickbar to toggle them\nand also be toggled with keybinds if you use [url=https://github.com/StarExtensions/StarExtensions]StarExtensions[/url] or [url=https://github.com/OpenStarbound/OpenStarbound]OpenStarbound[img]https://i.imgur.com/GlY6bda.png[/img][/url]\n\n[img]https://i.imgur.com/wXjYMqP.gif[/img]https://discord.gg/GdsQSgV\n[img]https://i.imgur.com/uyG8oTa.gif[/img]https://www.patreon.com/pathiccstar\n[img]https://i.imgur.com/xVfcRRH.gif[/img]https://ko-fi.com/patmanf\n[img]https://i.imgur.com/jJAj6jF.gif[/img]https://github.com/bongus-jive/ruler\n\n[img]https://cdn.discordapp.com/emojis/975242122917728336.gif?size=40[/img] <- give me these\n",
+  "tags" : "Crafting and Building|User Interface|In-Game Tools",
+  "version" : "1.3"
 }
