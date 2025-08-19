@@ -4,7 +4,7 @@
     "path": "/items/patman:ruler",
     "value": {
       "label": "^shadow;^#ff80ce;Ruler",
-      "icon": "/pat/ruler/ruler.png",
+      "icon": "/pat/ruler/images/rulericon.png",
       "weight": -999.02,
       "blockAutoDismiss": true,
       "action": [ "exec", "/pat/ruler/quickbartoggle.lua", "pat_ruler_toggle" ]
@@ -15,7 +15,7 @@
     "path": "/items/patman:tilegrid",
     "value": {
       "label": "^shadow;^#ff80ce;Tile Grid",
-      "icon": "/pat/ruler/gridicon.png",
+      "icon": "/pat/ruler/images/gridicon.png",
       "weight": -999.01,
       "blockAutoDismiss": true,
       "action": [ "exec", "/pat/ruler/quickbartoggle.lua", "pat_tilegrid_toggle" ]

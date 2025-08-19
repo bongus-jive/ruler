@@ -87,7 +87,7 @@ function update(dt)
   
   if gridEnabled then
     local pos = vec2.add(d, eDist)
-    localAnimator.addDrawable({image = "/pat/ruler/grid.png", fullbright = true, scale = 0.5, position = pos}, "Overlay+101")
+    localAnimator.addDrawable({image = "/pat/ruler/images/grid.png", fullbright = true, scale = 0.5, position = pos}, "Overlay+101")
   end
   
   if rulerEnabled then
@@ -179,7 +179,7 @@ drawRuler = function(eposCenter, eDist, aim, d)
   local str = string.format("%.0fx%.0f", display[1], display[2])
   for i = 1, #str do
     local h = str:sub(i, i)
-    localAnimator.addDrawable({image = "/pat/ruler/numbers.png:"..h, fullbright = true, scale = 0.75, position = textPos}, "Overlay+100")
+    localAnimator.addDrawable({image = "/pat/ruler/images/numbers.png:"..h, fullbright = true, scale = 0.75, position = textPos}, "Overlay+100")
     
     textPos[1] = textPos[1] + (h == "1" and 0.75 or 1.25) * 0.75
 	end

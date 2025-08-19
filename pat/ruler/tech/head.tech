@@ -7,7 +7,7 @@
   "description": "if you're reading this, something probably broke  :3",
   "shortDescription": "Ruler",
   "rarity": "common",
-  "icon": "/pat/ruler/ruler.png",
+  "icon": "/pat/ruler/images/rulericon.png",
 
   "chipCost": 0
 }
