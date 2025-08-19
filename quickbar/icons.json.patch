@@ -7,7 +7,7 @@
       "icon": "/pat/ruler/ruler.png",
       "weight": -999.02,
       "blockAutoDismiss": true,
-      "action": [ "exec", "/pat/ruler/quickbartoggle.lua" ]
+      "action": [ "exec", "/pat/ruler/quickbartoggle.lua", "pat_ruler_toggle" ]
     }
   },
   {
@@ -18,7 +18,7 @@
       "icon": "/pat/ruler/gridicon.png",
       "weight": -999.01,
       "blockAutoDismiss": true,
-      "action": [ "exec", "/pat/ruler/quickbartoggle.lua", "grid" ]
+      "action": [ "exec", "/pat/ruler/quickbartoggle.lua", "pat_tilegrid_toggle" ]
     }
   }
 ]
