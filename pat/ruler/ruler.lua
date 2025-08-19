@@ -183,6 +183,7 @@ function Ruler:drawRuler()
   local textPos = world.distance(self.aimPos, self.plrPos)
   textPos = vec2.add(textPos, self.config.textOffset)
   drawable.position = textPos
+  layer = self.config.textLayer
 
   local str = string.format("%.0fx%.0f", math.abs(x), math.abs(dist[2]) + 1)
   for char in str:gmatch(".") do
