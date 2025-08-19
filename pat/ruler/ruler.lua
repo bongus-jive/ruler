@@ -113,7 +113,7 @@ function Ruler:update(dt)
 end
 
 function Ruler:drawRuler()
-  local startTile = {self.plrTile[1], self.plrTile[2] - 2}
+  local startTile = vec2.add(self.plrTile, self.config.startOffset)
   local dist = world.distance(self.aimTile, startTile)
   local x, y = dist[1], dist[2]
   if x > 0 then startTile[1] = startTile[1] + 1 end
