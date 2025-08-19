@@ -67,8 +67,13 @@ function Ruler:smuggleAimPosition()
   self.storage.lastTech = player.equippedTech(self.techSlot)
 
   local mt = getmetatable''
+
+  self.getAimPosition = mt.pat_ruler_aimPosition
+  if self.getAimPosition then return end
+
   mt.pat_ruler_smuggleAimPosition = function(getAimPosition)
     mt.pat_ruler_smuggleAimPosition = nil
+    mt.pat_ruler_aimPosition = getAimPosition
     self.getAimPosition = getAimPosition
     self:restoreHeadTech()
   end
